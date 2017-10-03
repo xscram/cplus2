@@ -19,11 +19,11 @@
     <title>CoreUI - Open Source Bootstrap Admin Template</title>
 
     <!-- Icons -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/simple-line-icons.css" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/simple-line-icons.css') }}" rel="stylesheet">
 
     <!-- Main styles for this application -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 
 <!-- BODY options, add following classes to body to change options
@@ -81,7 +81,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
-                    <span class="d-md-down-none">admin</span>
+                    <span class="d-md-down-none">{{ Auth::user()->name }}</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <div class="dropdown-header text-center">
@@ -100,7 +100,15 @@
                     <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="badge badge-primary">42</span></a>
                     <div class="divider"></div>
                     <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                        <i class="fa fa-lock"></i> Logout
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
                 </div>
             </li>
         </ul>
@@ -213,7 +221,10 @@
 
 
             <div class="container-fluid">
-                <div id="ui-view"></div>
+                <div id="ui-view">
+                    @section('container')
+                    @show
+                </div>
             </div>
             <!-- /.conainer-fluid -->
         </main>
@@ -517,10 +528,10 @@
 
 
 
-    <script src="js/vendor/jquery-3.1.0.min.js"></script>
-    <script src="js/vendor/tether.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/vendor/pace.min.js"></script>
+    <script src="{{ asset('js/vendor/jquery-3.1.0.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/tether.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/pace.min.js') }}"></script>
 
 
     <!-- <script src="bower_components/chart.js/dist/Chart.min.js"></script> -->
@@ -528,7 +539,7 @@
 
     <!-- GenesisUI main scripts -->
 
-    <script src="js/app.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
 </body>
 </html>
