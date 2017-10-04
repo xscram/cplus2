@@ -14,19 +14,11 @@
     <title>CoreUI Bootstrap 4 Admin Template</title>
 
     <!-- Icons -->
-<<<<<<< HEAD
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/simple-line-icons.css" rel="stylesheet">
-
-    <!-- Main styles for this application -->
-    <link href="css/style.css" rel="stylesheet">
-=======
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/simple-line-icons.css') }}" rel="stylesheet">
 
     <!-- Main styles for this application -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
->>>>>>> 4243bb25a44e381be25109f4ffa28fecdb408ee3
 
 </head>
 
@@ -38,17 +30,10 @@
     </div>
 
     <!-- Bootstrap and necessary plugins -->
-<<<<<<< HEAD
-    <script src="js/vendor/jquery-3.1.0.min.js"></script>
-    <script src="js/vendor/tether.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/vendor/pace.min.js"></script>
-=======
     <script src="{{ asset('js/vendor/jquery-3.1.0.min.js') }}"></script>
     <script src="{{ asset('js/vendor/tether.min.js') }}"></script>
     <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/vendor/pace.min.js') }}"></script>
->>>>>>> 4243bb25a44e381be25109f4ffa28fecdb408ee3
 
 
 
