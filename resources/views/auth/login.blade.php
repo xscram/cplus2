@@ -6,8 +6,8 @@
         <div class="card-group mb-0">
             <div class="card p-4">
                 <div class="card-body">
-                    <h1>Login</h1>
-                    <p class="text-muted">Sign In to your account</p>
+                    <h1>{{ __('login.login') }}</h1>
+                    <p class="text-muted">{{__('login.sign_in_to_your_account')}}</p>
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
                         @if ($errors->has('email'))
