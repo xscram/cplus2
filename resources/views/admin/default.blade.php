@@ -19,11 +19,11 @@
     <title>CoreUI - Open Source Bootstrap Admin Template</title>
 
     <!-- Icons -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/simple-line-icons.css" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/simple-line-icons.css') }}" rel="stylesheet">
 
     <!-- Main styles for this application -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 
 <!-- BODY options, add following classes to body to change options
@@ -528,10 +528,10 @@
 
 
 
-    <script src="js/vendor/jquery-3.1.0.min.js"></script>
-    <script src="js/vendor/tether.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/vendor/pace.min.js"></script>
+    <script src="{{ asset('js/vendor/jquery-3.1.0.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/tether.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/pace.min.js') }}"></script>
 
 
     <!-- <script src="bower_components/chart.js/dist/Chart.min.js"></script> -->
@@ -539,7 +539,7 @@
 
     <!-- GenesisUI main scripts -->
 
-    <script src="js/app.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
 </body>
 </html>

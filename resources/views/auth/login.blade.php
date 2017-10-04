@@ -16,8 +16,12 @@
                             </p>
                         @endif                        
                         <div class="input-group mb-3">
+<<<<<<< HEAD
                             <span class="input-group-addon"><i class="icon-user"></i>
                             </span>
+=======
+                            <span class="input-group-addon">@</span>
+>>>>>>> 4243bb25a44e381be25109f4ffa28fecdb408ee3
                             <input type="text" class="form-control" id="email" name="email" value="{{ old('email') }}" required autofocus placeholder="Email">
                         </div>
                         <div class="input-group mb-4">
