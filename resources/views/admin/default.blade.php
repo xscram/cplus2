@@ -81,7 +81,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
-                    <span class="d-md-down-none">admin</span>
+                    <span class="d-md-down-none">{{ Auth::user()->name }}</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <div class="dropdown-header text-center">
@@ -100,7 +100,15 @@
                     <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="badge badge-primary">42</span></a>
                     <div class="divider"></div>
                     <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                        <i class="fa fa-lock"></i> Logout
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
                 </div>
             </li>
         </ul>
@@ -213,7 +221,10 @@
 
 
             <div class="container-fluid">
-                <div id="ui-view"></div>
+                <div id="ui-view">
+                    @section('container')
+                    @show
+                </div>
             </div>
             <!-- /.conainer-fluid -->
         </main>

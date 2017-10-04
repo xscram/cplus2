@@ -15,3 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/admin', 'DashboardController@initView');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -1540,7 +1540,7 @@ fieldset[disabled] a.btn {
     background-color: #1a2226;
     background-image: none;
     border-color: #151b1f; }
-
+  
 .btn-outline-primary {
   color: #20a8d8;
   background-color: transparent;
@@ -8719,3 +8719,7 @@ hr.transparent {
     border-right-color: #f0f3f5; }
   *[dir="rtl"].callout-dark {
     border-right-color: #29363d; }
+
+  .card .btn-white{
+      background:#fff;
+  }

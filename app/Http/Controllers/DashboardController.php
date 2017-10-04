@@ -19,7 +19,7 @@ class DashboardController extends Controller{
     //put your code here
     
     public function initView(){
-        return view('admin.default');
+        return view('admin.dashboard');
     }
     
 }
