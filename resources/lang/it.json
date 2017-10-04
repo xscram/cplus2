@@ -1,3 +1,13 @@
 {
-    "Register": "Registrati"
+	
+    "Register": "Registrati",
+    "Create your account":"Crea il tuo account",
+    "Your name": "Il tuo nome",
+    "Email": "Email",
+    "Password":"Password",
+    "Repeat password":"Ripeti password",
+    "Create Account":"Crea Account"
+
+
+
 }
