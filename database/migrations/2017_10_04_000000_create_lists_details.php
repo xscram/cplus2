@@ -15,10 +15,31 @@ class CreateListsDetailsTable extends Migration
     {
         Schema::create('lists_details', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('codice_contatto');
+            $table->string('ragione_sociale');
+            $table->string('titolare_azienda');
+            $table->string('contatto');
+            $table->string('settore');
+            $table->string('telefono');
+            $table->string('cellulare');
+            $table->string('fax');
+            $table->string('email');
+            
+            $table->string('indirizzo');
+            $table->string('citta');
+            $table->string('provincia');
+            $table->int('provincia');
+            
+            $table->decimal('latitudine',13,8);
+            $table->decimal('longitudine',13,8);
+            
+            $table->string('sito_web');
+            $table->text('note');
+
+
+            
             $table->string('email')->unique();
-            $table->string('password');
-            $table->rememberToken();
+
             $table->timestamps();
         });
     }
