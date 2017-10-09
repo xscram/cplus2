@@ -14,7 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/admin', 'DashboardController@initView');
+
+//ADMIN
+Route::prefix('admin')->group(function () {
+	Route::get('/', 'DashboardController@initView');
+
+	Route::get('/listadd', 'ListsLoadController@initView');
+	Route::post('/listadd', 'ListsLoadController@save')->name('lists.save');
+
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

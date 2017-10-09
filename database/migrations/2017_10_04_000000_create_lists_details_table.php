@@ -28,7 +28,7 @@ class CreateListsDetailsTable extends Migration
             $table->string('indirizzo');
             $table->string('citta');
             $table->string('provincia');
-            $table->int('provincia');
+            //$table->int('cap');
             
             $table->decimal('latitudine',13,8);
             $table->decimal('longitudine',13,8);
@@ -36,9 +36,6 @@ class CreateListsDetailsTable extends Migration
             $table->string('sito_web');
             $table->text('note');
 
-
-            
-            $table->string('email')->unique();
 
             $table->timestamps();
         });
